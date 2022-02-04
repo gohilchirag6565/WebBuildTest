@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | CrownJewel</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 550px; height: 800px; background: url('Build/webBuild.jpg') center / cover"></canvas>
+    <script src="Build/webBuild.asm.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/webBuild.data.gz",
+        frameworkUrl: "Build/webBuild.asm.framework.js.gz",
+        codeUrl: "Build/webBuild.asm.js.gz",
+        memoryUrl: "Build/webBuild.asm.mem.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "gamiestudios",
+        productName: "CrownJewel",
+        productVersion: "1.2",
+      });
+    </script>
+  </body>
+</html>
